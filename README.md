@@ -1,5 +1,5 @@
 # Internet tehnologije-2024
-Repozitorijum predmeta razvoj Internet tehnologije - MAS 2024/2025
+Repozitorijum predmeta Internet tehnologije - MAS 2024/2025
 
 ---
 - Potrebni alati i razvojna okruzenja za rad na demo projektu
