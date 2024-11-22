@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using WebShop2.DAL.FluentMapping;
 
 namespace WebShop2.DAL.Models;
 
@@ -19,15 +18,6 @@ public partial class WebShop2Context : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Kategorija>(entity =>
-        {
-            entity.ToTable("Kategorija");
-
-            entity.Property(e => e.Naziv).HasMaxLength(50);
-        });
-
-        OnModelCreatingPartial(modelBuilder);
+        modelBuilder.ApplyConfiguration(new KategorijaMap());
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

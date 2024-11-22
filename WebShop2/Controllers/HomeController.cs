@@ -24,16 +24,16 @@ namespace WebShop2.Controllers
         public IActionResult Privacy()
         {
             //Create
-            //var kategorija = new Kategorija { Naziv = "Racunarska oprema 1" };
-            //_db.Kategorijas.Add(kategorija);
-            
+            var kategorija = new Kategorija { Naziv = "Racunarska oprema 1" };
+            _db.Kategorijas.Add(kategorija);
+
             //Update
             //var kategorija = _db.Kategorijas.Single(k => k.Id == 1);
             //kategorija.Naziv = "Racunarske periferije";
 
             //Delete
-            var kategorija = _db.Kategorijas.Single(k => k.Id == 1);
-            _db.Kategorijas.Remove(kategorija);
+            //var kategorija = _db.Kategorijas.Single(k => k.Id == 1);
+            //_db.Kategorijas.Remove(kategorija);
 
             _db.SaveChanges();
             return View();
